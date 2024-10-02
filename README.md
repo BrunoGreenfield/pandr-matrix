@@ -13,5 +13,3 @@ This project aims to build an LED Matrix display-board for one of the classrooms
 - Spark curiosity and inspiration in his students (it should look cool)
 - Give everybody attending the club a chance to contribute
 - Meet all above requirements by the end of the 2024-2025 school year
-
-Check out the web-portal repo at https://github.com/ajjswift/pandr-web
