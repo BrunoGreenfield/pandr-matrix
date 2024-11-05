@@ -30,5 +30,4 @@ def randBin():
     return output
 
 def randDec():
-    randomDec = randint(0, 255)
-    return randomDec
+    return randint(0, 255)
