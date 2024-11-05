@@ -28,3 +28,7 @@ def randBin():
     
     # Here we simple return our 'output' variable once the loop has finished.
     return output
+
+def randDec():
+    randomDec = randint(0, 255)
+    return randomDec
