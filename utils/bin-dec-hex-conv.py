@@ -3,16 +3,17 @@
 # hexChars is a list of all the hex characters in order
 hexChars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
 
+# Converts any hex integers to binary equivlents intuitively
 def hexToBin(hexStr):
     hexList = [i for i in hexStr] # This is a list comprehension. It saves me from having to run a 'for' loop in order to get each element from our string to put into a list
 
     result = ''
     for nibble in hexList:
-        result += decToBinary(hexChars.index(nibble), True)
+        result += decToBinary(hexChars.index(nibble), True) # The index will be the decimal equivlent as the list is ordered
 
     return result
 
-        
+# Can convert 4 or 8 bit decimal integers to binary intuitively. Defaults to 8 bit mode unless fourBitMode is specified as true
 def decToBinary(dec, fourBitMode=False): # We assume 8 bit mode unless explicitly stated
     if fourBitMode:
         comparisonNum = 8
