@@ -1,5 +1,3 @@
-# This repository has been moved to https://github.com/BrunoGreenfield/pandr-matrix
-
 # pandr-matrix
 This project aims to build an LED Matrix display-board for one of the classrooms at our school
 
