@@ -4,6 +4,7 @@
 # else's code (the 'randint' function) to serve our purpose. Examples on when we might do this is 
 # for generating random things and handling time.
 from random import randint
+from utils.bin_dec_hex_conv import hexChars
 
 # This is where we declare our function -> 'def' is a python keyword, telling it that the next bit
 # of code will be the function name
@@ -33,10 +34,10 @@ def randDec():
     return randint(0, 255)
 
 def randHex():
-    base16 = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"]    
     output = ''
 
     for _ in range(2):
-        randomHex = base16[randint(0,15)]
+        randomHex = hexChars[randint(0,15)]
         output = output + randomHex
+
     return output
