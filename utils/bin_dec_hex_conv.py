@@ -14,7 +14,7 @@ def hexToBin(hexStr):
     return result
 
 # Can convert 4 or 8 bit decimal integers to binary intuitively. Defaults to 8 bit mode unless fourBitMode is specified as true
-def decToBinary(dec, fourBitMode=False): # We assume 8 bit mode unless explicitly stated
+def decToBin(dec, fourBitMode=False): # We assume 8 bit mode unless explicitly stated
     if fourBitMode:
         comparisonNum = 8
     else:
@@ -33,3 +33,10 @@ def decToBinary(dec, fourBitMode=False): # We assume 8 bit mode unless explicitl
             break
 
     return result
+
+def binToDec(binStr):
+    comparisonNum = 128
+    total = 0
+    for char in binStr:
+        
+        
