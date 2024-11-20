@@ -38,5 +38,9 @@ def binToDec(binStr):
     comparisonNum = 128
     total = 0
     for char in binStr:
-        
-        
+        if = "1"
+        total += comparisonNum
+        comparisonNum /= 2
+        if comparisonNum < 1
+            break
+    return total
