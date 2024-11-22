@@ -9,7 +9,7 @@ def hexToBin(hexStr):
 
     result = ''
     for nibble in hexList:
-        result += decToBinary(hexChars.index(nibble), True) # The index will be the decimal equivlent as the list is ordered
+        result += decToBin(hexChars.index(nibble), True) # The index will be the decimal equivlent as the list is ordered
 
     return result
 
@@ -45,4 +45,4 @@ def binToDec(binStr):
         comparisonNum /= 2
         if comparisonNum < 1:
             break
-        return total
+    return total
