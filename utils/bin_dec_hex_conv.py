@@ -37,10 +37,13 @@ def decToBin(dec, fourBitMode=False): # We assume 8 bit mode unless explicitly s
 def binToDec(binStr):
     comparisonNum = 128
     total = 0
-    for char in binStr:
-        if = "1"
-        total += comparisonNum
-        comparisonNum /= 2
-        if comparisonNum < 1
-            break
-    return total
+    while True:
+        for char in binStr:
+            if char == "1":
+                total += comparisonNum
+            else:
+                total += 0
+            comparisonNum /= 2
+            if comparisonNum < 1:
+                break
+        return total
