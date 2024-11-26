@@ -1,5 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
+from utils.bin_dec_hex_gen import randBin
+
+def displaybin():
+    bindisplay.config(text=randBin())
 
 window = tk.Tk()
 window.title('Matrix Control Panel')
@@ -16,5 +20,11 @@ notebook.pack(expand=True, fill='both') # Expand fills space not otherwise used,
 
 exitBtn = tk.Button(mainTab, text='Exit', command=window.quit, width=20)
 exitBtn.pack()
+
+binaryBtn = tk.Button(baseNTab, text='Binary', command=displaybin, width=20)
+binaryBtn.pack()
+
+bindisplay = tk.Label(baseNTab)
+bindisplay.pack()
 
 window.mainloop()
