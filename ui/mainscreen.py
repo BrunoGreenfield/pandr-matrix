@@ -3,7 +3,7 @@ from tkinter import ttk
 
 window = tk.Tk()
 window.title('Matrix Control Panel')
-window.minsize(width=1024, height=768) # We will want to change this to the resolution of our monitor
+window.minsize(width=1280, height=800)
 
 notebook = ttk.Notebook(window) # Manages a collection of windows/displays
 
