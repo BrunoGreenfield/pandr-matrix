@@ -8,7 +8,7 @@ This project aims to build an LED Matrix display-board for one of the classrooms
 - Every student will be encouraged to work independently, but I will do my own research into everything that goes into this project, assigning people much more manageable 'tasks'. This way the project can move forward, and will be completed in a way where I am happy everyone is benefiting.
 
 ## Project requirements:
-- Cost - <£100
+- Cost - <£200
 - Benefit Mr Price's life as a teacher (should help him teach his lessons without getting in the way)
 - Spark curiosity and inspiration in his students (it should look cool)
 - Give everybody attending the club a chance to contribute
