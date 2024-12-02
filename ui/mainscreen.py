@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-from utils.bin_dec_hex_gen import randBin
+from utils.bin_dec_hex_tools import randBin
 
 def displaybin():
     bindisplay.config(text=randBin())
