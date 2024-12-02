@@ -1,10 +1,14 @@
+# A collection of functions/tools to do with Binary, Hexadecimal and Decimal 8-bit integers
+
 # Here we import the 'randint' function from the 'random' library. Libraries are files that contain
 # functions written by other people. In this case, writing a function that returns a random integer
 # between two values could be hard and time consuming to code. In such a case, we can use somebody 
 # else's code (the 'randint' function) to serve our purpose. Examples on when we might do this is 
 # for generating random things and handling time.
 from random import randint
-from utils.bin_dec_hex_conv import hexChars
+
+# hexChars is a list of all the hex characters in order
+hexChars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
 
 # This is where we declare our function -> 'def' is a python keyword, telling it that the next bit
 # of code will be the function name
@@ -41,3 +45,47 @@ def randHex():
         output = output + randomHex
 
     return output
+
+# Converts any hex integers to binary equivlents intuitively
+def hexToBin(hexStr):
+    hexList = [i for i in hexStr] # This is a list comprehension. It saves me from having to run a 'for' loop in order to get each element from our string to put into a list
+
+    result = ''
+    for nibble in hexList:
+        result += decToBin(hexChars.index(nibble), True) # The index will be the decimal equivlent as the list is ordered
+
+    return result
+
+# Can convert 4 or 8 bit decimal integers to binary intuitively. Defaults to 8 bit mode unless fourBitMode is specified as true
+def decToBin(dec, fourBitMode=False): # We assume 8 bit mode unless explicitly stated
+    if fourBitMode:
+        comparisonNum = 8
+    else:
+        comparisonNum = 128
+
+    result = ''
+    while True:
+        if comparisonNum <= dec:
+            result += '1'
+            dec -= comparisonNum
+        else:
+            result += '0'
+
+        comparisonNum /= 2
+        if comparisonNum < 1:
+            break
+
+    return result
+
+def binToDec(binStr):
+    comparisonNum = 128
+    total = 0
+    for char in binStr:
+        if char == "1":
+            total += comparisonNum
+        else:
+            total += 0
+        comparisonNum /= 2
+        if comparisonNum < 1:
+            break
+    return total
