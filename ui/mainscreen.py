@@ -3,7 +3,10 @@ from tkinter import ttk
 from utils.bin_dec_hex_tools import randBin
 
 def displaybin():
-    bindisplay.config(text=randBin())
+    bindisplay.config(text=f"{randBin()} \n{randBin()} \n{randBin()} \n{randBin()} \n{randBin()} ", font=("Arial", 20))
+    
+def displayhex():
+    pass
 
 window = tk.Tk()
 window.title('Matrix Control Panel')
@@ -21,9 +24,13 @@ notebook.pack(expand=True, fill='both') # Expand fills space not otherwise used,
 exitBtn = tk.Button(mainTab, text='Exit', command=window.quit, width=20)
 exitBtn.pack()
 
-binaryBtn = tk.Button(baseNTab, text='Binary', command=displaybin, width=20)
-binaryBtn.pack()
+#Binary Gen
+binaryBtn = tk.Button(baseNTab, text='Binary', command=displaybin, width=30, height=5).pack(side="top")
 
+#Hexadecimal Gen
+hexBtn = tk.Button(baseNTab, text='Hexadecimal', command=displayhex, width=30, height=5).pack(side="left")
+
+#Binary Display
 bindisplay = tk.Label(baseNTab)
 bindisplay.pack()
 
