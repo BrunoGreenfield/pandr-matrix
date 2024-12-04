@@ -16,14 +16,15 @@ matrix = RGBMatrix(options=options)
 canvas = matrix.CreateFrameCanvas()
 
 font = graphics.Font()
-font.LoadFont("fonts/7x13.bdf")
+font.LoadFont("fonts/10x20.bdf")
 text_color = graphics.Color(0, 255, 0)
-
-text = "PANDR-Matrix"
 
 try:
     while True:
-        graphics.DrawText(canvas, font, 0, 32, text_color, text)
+        currentTime = time.strftime("%H:%M:%S", time.gmtime())
+
+        canvas.Clear()
+        graphics.DrawText(canvas, font, 64-len(currentTime)*5, 32+6, text_color, currentTime)
         
         canvas = matrix.SwapOnVSync(canvas)
 except KeyboardInterrupt:
