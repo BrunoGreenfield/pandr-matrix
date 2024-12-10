@@ -1,12 +1,5 @@
 import tkinter as tk
 from tkinter import ttk
-from utils.bin_dec_hex_tools import randBin
-
-def displaybin():
-    bindisplay.config(text=f"{randBin()} \n{randBin()} \n{randBin()} \n{randBin()} \n{randBin()} ", font=("Arial", 20))
-    
-def displayhex():
-    pass
 
 window = tk.Tk()
 window.title('Matrix Control Panel')
@@ -31,15 +24,4 @@ exitBtn = tk.Button(mainTab,
                     width=20)
 exitBtn.place(x=492, y=710)
 
-#Binary Gen
-binaryBtn = tk.Button(baseNTab, text='Binary', command=displaybin, width=30, height=5).pack(side="top")
-
-#Hexadecimal Gen
-hexBtn = tk.Button(baseNTab, text='Hexadecimal', command=displayhex, width=30, height=5).pack(side="left")
-
-#Binary Display
-bindisplay = tk.Label(baseNTab)
-bindisplay.pack()
-
 window.mainloop()
-
