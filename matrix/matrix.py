@@ -7,7 +7,7 @@ options.rows = 64
 options.cols = 64
 options.chain_length = 2
 options.parallel = 1
-options.hardware_mapping = 'adafruit-hat-pwm' 
+options.hardware_mapping = 'adafruit-hat-pwm'
 options.gpio_slowdown = 4
 options.pwm_bits = 8
 
@@ -25,7 +25,7 @@ try:
 
         canvas.Clear()
         graphics.DrawText(canvas, font, 64-len(currentTime)*5, 32+6, text_color, currentTime)
-        
+
         canvas = matrix.SwapOnVSync(canvas)
 except KeyboardInterrupt:
     matrix.Clear()
