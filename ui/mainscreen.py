@@ -15,6 +15,24 @@ notebook.add(mainTab, text='Home')
 notebook.add(baseNTab, text='BaseN')
 notebook.pack(expand=True, fill='both') # Expand fills space not otherwise used, fill will fill space on x and y axis
 
+announcementVar=tk.StringVar()
+def submit():
+    announcement=announcementVar.get()
+    #("    ANNOUNCEMENT    " + announcement + "    ANNOUNCEMENT    ")
+    screenPrev.config(text=announcement)
+    announcementVar.set("")
+    
+announcementEntry = tk.Entry(mainTab,
+                             textvariable = announcementVar,
+                             font=('DejaVu Sans',10,'normal'))
+subBtn=tk.Button(mainTab,text = 'Submit', command = submit)
+screenPrev = tk.Label(mainTab)
+
+announcementEntry.pack()
+subBtn.pack()
+screenPrev.pack()
+
+
 exitBtn = tk.Button(mainTab,
                     text='Exit',
                     bg="red",
